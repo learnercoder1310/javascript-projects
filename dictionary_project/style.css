@@ -1,0 +1,120 @@
+:root {
+    --padding-color: #008080;  /* Fixed color value */
+    --bcg-color: #f5f5f5;
+    --padding: 20px;
+    --text-color: #fff;
+    --border-radius: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bcg-color);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--padding-color);
+    padding: var(--padding);
+    color: var(--text-color);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+main {
+    min-height: 72vh;
+    padding: var(--padding);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+form input[type="text"],
+form button[type="submit"],
+.result a {
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+}
+
+form button[type="submit"] {
+    background-color: var(--padding-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--padding-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.result {
+    background-color: #fff;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.result p {
+    margin-top: 10px;
+}
+
+.result p.partOfSpeech {
+    font-style: italic;
+    color: #808080;
+    margin-top: 2px;
+}
+
+.result a {
+    text-decoration: none;
+    background-color: var(--padding-color);
+    color: var(--text-color);
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+}
+
+.result li {
+    padding: 4px;
+    margin-left: 20px;
+}
+
+/* ✅ Correct Media Query Syntax */
+@media screen and (max-width: 320px) {
+    main form {
+        flex-direction: column;
+    }
+
+    form button[type="submit"] {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
+
+
